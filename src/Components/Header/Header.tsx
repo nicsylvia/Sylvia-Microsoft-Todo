@@ -45,7 +45,7 @@ const Container = styled.div`
     justify-content: space-between;
     background-color: #2564CF;
     color: white;
-    /* position: fixed; */
+    position: fixed;
  
 `;
 const Todo = styled.div`
