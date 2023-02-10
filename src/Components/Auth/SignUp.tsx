@@ -68,12 +68,6 @@ const SignUp = () => {
 
 export default SignUp;
 
-const Curve = styled.div`
-    width: 150px;
-    height: 60px;
-    background-color: blue;
-`;
-
 const Container = styled.div`
     width: 100%;
     height: 100vh;

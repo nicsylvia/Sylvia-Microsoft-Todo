@@ -1,4 +1,3 @@
-import path from 'path';
 import React from 'react'
 import { useRoutes } from "react-router-dom";
 import AssignedTask from '../AssignedTask/AssignedTask';
@@ -6,6 +5,7 @@ import SignIn from '../Auth/SignIn';
 import SignUp from '../Auth/SignUp';
 import ImportantTask from '../ImportantTask/ImportantTask';
 import MyDay from '../MyDay/MyDay';
+import NotFound from '../NotFound';
 import PlannedTask from '../PlannedTask/PlannedTask';
 import Tasks from '../Tasks/Tasks';
 
@@ -41,10 +41,14 @@ const AllRoutes = () => {
                     element: <AssignedTask />
                 },
                 {
-                    path: "/tasks/tasks",
+                    path: "/tasks/inbox",
                     element: <Tasks />
                 },
             ]
+        },
+        {
+            path: "*",
+            element: <NotFound />
         }
     ])
   return element
