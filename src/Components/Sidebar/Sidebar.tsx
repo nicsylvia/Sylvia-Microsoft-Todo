@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components';
 import { MdOutlineWbSunny, MdOutlineEmail, MdOutlineAttachFile } from "react-icons/md";
-import { AiOutlineStar } from "react-icons/ai";
+import { AiOutlineStar, AiOutlinePlus } from "react-icons/ai";
 import { BiCalendar } from "react-icons/bi";
 import { BsCalendar4Week, BsPeople } from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa";
 import { FiHome } from "react-icons/fi";
 import { TiTickOutline } from "react-icons/ti";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { CgFolderAdd } from "react-icons/cg";
 
 const Sidebar = () => {
   return (
@@ -59,6 +60,21 @@ const Sidebar = () => {
                         Tasks
                     </Tittle>
                 </Div>
+                <Div3>
+                    <Div2>
+                        <div>
+                        <Pic>
+                            <AiOutlinePlus />
+                        </Pic>
+                        <Tittle>
+                            New List
+                        </Tittle>
+                        </div>
+                        <Pic>
+                            <CgFolderAdd />
+                        </Pic>
+                    </Div2>
+                </Div3>
             </Menu>
             <Menu2>
                 <Icon>
@@ -84,6 +100,31 @@ const Sidebar = () => {
 
 export default Sidebar;
 
+const Div3 = styled.div`
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+const Div2 = styled.div`
+    border-top: 1px solid black;
+    width: 90%;
+    padding: 5px 0px 5px 0px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: blue;
+    div{
+        display: flex;
+        :hover{
+        background-color: #87cfeb28;
+    }
+    }
+`;
+
 const Container = styled.div`
     width: 300px;
     background-color: white;
@@ -98,6 +139,8 @@ const Menu = styled.div`
     width: 100%;
     /* background-color: red; */
     padding: 10px 0px 10px 0px;
+    display: flex;
+    flex-direction: column;
 `;
 const Menu2 = styled.div`
     width: 100%;
@@ -137,7 +180,7 @@ const Div = styled.div`
     cursor: pointer;
     transition: all 350ms;
     :hover{
-        background-color: skyblue;
+        background-color: #87cfeb28;
     }
 `;
 const Pic = styled.div`
@@ -162,6 +205,7 @@ const Tittle = styled.div`
 `;
 const Div1 = styled.div`
     margin-left: 20px;
+    /* background-color: red; */
     padding: 10px 0px 10px 0px;
     cursor: pointer;
 `;
