@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { TbGridDots } from "react-icons/tb";
 import { AiOutlineQuestion, AiOutlineNotification } from "react-icons/ai";
 import { VscSearch, VscSettingsGear } from "react-icons/vsc";
+import Sidebar from '../Sidebar/Sidebar';
 
 
 const Header = () => {
@@ -29,6 +30,7 @@ const Header = () => {
                 </Icon>
             </Settings>
         </Container>
+        <Sidebar />
     </div>
   )
 }
